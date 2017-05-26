@@ -1,0 +1,19 @@
+{
+  "name": "gsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shariff6/gsearch.git"
+  },
+  "author": "shariff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shariff6/gsearch/issues"
+  },
+  "homepage": "https://github.com/shariff6/gsearch#readme"
+}
