@@ -23,7 +23,7 @@ var users = $('#userName').val();
         } else {
           response[i].description = response[i].description
         }
-        $('.link').append("<li>" +  response[i].name.toUpperCase() + "</li>" +  response[i].description + "<br>" + response[i].html_url)
+        $('.link').append("<li class = 'remove'>" +  response[i].name.toUpperCase() + "</li>" + "<p class = 'remove'>" + response[i].description + "<br>" + response[i].html_url + "</p>")
       }
   }).fail(function(error) {
     //console.log(error.response.message);
@@ -38,10 +38,11 @@ var Search = require('./../js/gsearch.js').searchModule;
 $(document).ready(function() {
   var nameSearch = new Search();
   $('#searchName').click(function() {
-    this.disabled=true
     var users = $('#userName').val();
     var x = nameSearch.getUser(users)
     $('.result').show()
+    $("li.remove").remove();
+    $("p.remove").remove();
 
   })
 })

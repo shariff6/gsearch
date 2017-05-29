@@ -19,7 +19,7 @@ var users = $('#userName').val();
         } else {
           response[i].description = response[i].description
         }
-        $('.link').append("<li>" +  response[i].name.toUpperCase() + "</li>" +  response[i].description + "<br>" + response[i].html_url)
+        $('.link').append("<li class = 'remove'>" +  response[i].name.toUpperCase() + "</li>" + "<p class = 'remove'>" + response[i].description + "<br>" + response[i].html_url + "</p>")
       }
   }).fail(function(error) {
     //console.log(error.response.message);
