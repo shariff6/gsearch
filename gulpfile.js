@@ -49,10 +49,7 @@ gulp.task("minifyScripts", ["jsBrowserify"], function() {
     .pipe(uglify())
     .pipe(gulp.dest("./build/js"));
 });
-gulp.task("clean", function() {
-  return del(['build', 'tmp']);
-});
-gulp.task("build", ['clean'], function() {
+gulp.task("build",function() {
   if (buildProduction) {
     gulp.start('minifyScripts');
   } else {
