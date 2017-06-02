@@ -26,7 +26,7 @@ gulp.task('bowerJS', function() {
     .pipe(gulp.dest('./build/js'));
 });
 gulp.task('bowerCSS', function() {
-  return gulp.src(lib.ext('css/*css').files)
+  return gulp.src(lib.ext('css').files)
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('./build/css'));
 });
@@ -49,7 +49,10 @@ gulp.task("minifyScripts", ["jsBrowserify"], function() {
     .pipe(uglify())
     .pipe(gulp.dest("./build/js"));
 });
-gulp.task("build",function() {
+gulp.task("clean", function() {
+  return del(['build', 'tmp']);
+});
+gulp.task("build", ['clean'], function() {
   if (buildProduction) {
     gulp.start('minifyScripts');
   } else {
